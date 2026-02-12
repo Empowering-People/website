@@ -1,6 +1,5 @@
 :root {
     font-size: 18px;
-    font-family: "Roboto", sans-serif;
 
     --colour-grey: rgba(42, 40, 41, 1);
     --colour-white: rgba(255, 255, 255, 1);
@@ -27,35 +26,144 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    font-family: "Roboto", sans-serif;
 }
 
-.hero-banner {
-    display: grid;
-    grid-template-columns: minmax(100px, 1fr);
-    gap: 30px;
+.dyslexic-font-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
     background: var(--colour-blue);
+    color: var(--colour-white);
+    border: transparent;
+    border-radius: 12px;
+    margin: 0;
+    padding: 12px;
+    font-family: "OpenDyslexic", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.25s;
+}
+
+.dyslexic-font-toggle:hover {
+    background: var(--colour-white);
+    color: var(--colour-black);
+}
+
+.dyslexic-font-toggle .toggle-text {
+    font-family: "OpenDyslexic", sans-serif;
+}
+
+/* OpenDyslexic Mode, toggled by button at top right of every page. */
+body.dyslexic-font,
+body.dyslexic-font * {
+    font-family: "OpenDyslexic", sans-serif !important;
+}
+
+.hero-banner-home {
+    position: relative;
     width: 100vw;
     margin: 0;
-    padding: 25px 50px;
+    padding: 60px 0;
+    background:
+        linear-gradient(90deg, var(--colour-blue), rgba(0, 0, 0, 0.5)),
+        url(/images/placeholder.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.hero-banner .logo-area {
-    margin: 0;
+.hero-header {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
     padding: 0;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 2.5%;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
     width: fit-content;
-    color: var(--colour-white);
+    float: right;
 }
 
-.hero-banner .head-area {
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.1rem;
+    margin: 0 5px;
+    padding: 10px;
+    width: fit-content;
+    background: transparent;
+    color: var(--colour-white);
+    transition: 0.25s;
+}
+
+.navbar li a:hover {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav-inactive {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.logo-container {
+    width: fit-content;
     margin: 0;
     padding: 0;
-    color: var(--colour-white);
 }
 
-.logo {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+.logo-anchor:link {
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+}
+
+.logo-anchor:visited {
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+}
+
+.logo-anchor:hover {
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+}
+
+.logo-anchor:active {
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+}
+
+.logo-image {
+    width: 80%;
+}
+
+.hero-cover-text {
+    color: var(--colour-white);
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
@@ -112,15 +220,4 @@ p {
     font-weight: 400;
     margin: 0;
     padding: 0;
-}
-
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background: var(--colour-grey);
-}
-
-.navbar li {
-    float: left;
 }

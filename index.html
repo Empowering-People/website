@@ -26,6 +26,46 @@
             href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+
+        <!-- CDNFonts: OpenDyslexic -->
+        <style>
+            @font-face {
+                font-family: "OpenDyslexic";
+                font-style: normal;
+                font-weight: 400;
+                src:
+                    local("OpenDyslexic"),
+                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Regular.woff")
+                        format("woff");
+            }
+            @font-face {
+                font-family: "OpenDyslexic";
+                font-style: italic;
+                font-weight: 400;
+                src:
+                    local("OpenDyslexic"),
+                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Italic.woff")
+                        format("woff");
+            }
+            @font-face {
+                font-family: "OpenDyslexic";
+                font-style: normal;
+                font-weight: 700;
+                src:
+                    local("OpenDyslexic"),
+                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Bold.woff")
+                        format("woff");
+            }
+            @font-face {
+                font-family: "OpenDyslexic";
+                font-style: italic;
+                font-weight: 700;
+                src:
+                    local("OpenDyslexic"),
+                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-BoldItalic.woff")
+                        format("woff");
+            }
+        </style>
     </head>
     <!--
         To whomever has the job of maintaining this site when I'm gone:
@@ -49,29 +89,52 @@
         [Alan, please add details]
     -->
     <body>
-        <div class="hero-banner">
-            <div class="logo-area">
-                <img
-                    class="logo"
-                    src="/images/logo.png"
-                    alt="Empowering People logo"
-                />
+        <button
+            id="dyslexicFontToggle"
+            class="dyslexic-font-toggle"
+            aria-label="Toggle Dyslexia Friendly Font"
+        >
+            <p class="toggle-text">Toggle Dyslexia<br />Friendly Font</p>
+        </button>
+        <div class="hero-banner-home">
+            <div class="hero-header">
+                <ul class="navbar">
+                    <!-- NOTE: Navbar currently looks like a dog's asshole. Fix later. -->
+                    <li><a href="/index" class="nav-active">Home</a></li>
+                    <li><a href="/about" class="nav-inactive">About Us</a></li>
+                    <li>
+                        <a href="/our-work" class="nav-inactive">Our Work</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="nav-inactive">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="/hidden-disability" class="nav-inactive">
+                            What We Mean By Hidden Disability
+                        </a>
+                    </li>
+                </ul>
+                <div class="logo-container">
+                    <a class="logo-anchor" href="/index">
+                        <img
+                            class="logo-image"
+                            src="/images/logo.png"
+                            alt="Empowering People Logo"
+                        />
+                    </a>
+                </div>
             </div>
-            <div class="head-area">
+            <div class="hero-cover-text">
                 <h2>Working Together For a Better Future</h2>
-                <h4>
-                    Specialist services designed to empower individuals with
-                    extra support needs and hidden disabilities gain wilful
-                    employment and lead fulfilling lives.
-                </h4>
+                <h5>
+                    <i>
+                        Specialist services designed to empower individuals with
+                        additional support needs and hidden disabilities, to
+                        gain willful employment and lead fulfilling lives.
+                    </i>
+                </h5>
             </div>
         </div>
-        <ul class="navbar">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html">Home</a></li>
-        </ul>
+        <script src="/scripts/opendyslexic.js"></script>
     </body>
 </html>
