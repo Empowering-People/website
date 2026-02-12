@@ -26,6 +26,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    overflow-x: hidden; /* NOTE: This is the stupid fix, and should absolutely be treated as a temporary solution. */
     font-family: "Roboto", sans-serif;
 }
 
@@ -163,6 +164,46 @@ body.dyslexic-font * {
     color: var(--colour-white);
     width: 99%;
     margin: 0 auto;
+    text-align: center;
+}
+
+.footer {
+    background: var(--colour-beige);
+    width: 100vw;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.footer-info {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.footer-info-left {
+    text-align: left;
+}
+
+.footer-info-center {
+    text-align: center;
+}
+
+.footer-info-center a {
+    text-decoration: none;
+    color: var(--colour-blue);
+    font-size: 1.5rem;
+    transition: 0.25s;
+}
+
+.footer-info-center a:hover {
+    font-size: 1.75rem;
+}
+
+.footer-info-right {
+    text-align: right;
+}
+
+.copyright-notice {
     text-align: center;
 }
 
