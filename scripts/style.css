@@ -22,11 +22,12 @@
         Black      = 900
 */
 
+html,
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    overflow-x: hidden; /* NOTE: This is the stupid fix, and should absolutely be treated as a temporary solution. */
+    width: 100%;
+    /*overflow-x: hidden; /* NOTE: This is the stupid fix, and should absolutely be treated as a temporary solution. */
     font-family: "Roboto", sans-serif;
 }
 
@@ -73,6 +74,7 @@ body.dyslexic-font [class*=" fa-"] {
 .hero-banner-home {
     position: relative;
     width: 100vw;
+    max-width: 100%;
     margin: 0;
     padding: 60px 0;
     background:
@@ -174,9 +176,108 @@ body.dyslexic-font [class*=" fa-"] {
     text-align: center;
 }
 
+.content-container-grey {
+    background: var(--colour-grey);
+    color: var(--colour-white);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+.content-container-white {
+    background: var(--colour-white);
+    color: var(--colour-black);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+.content-container-beige {
+    background: var(--colour-beige);
+    color: var(--colour-black);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+.content-container-black {
+    background: var(--colour-black);
+    color: var(--colour-white);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+.content-container-blue {
+    background: var(--colour-blue);
+    color: var(--colour-white);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+.content-container-light-grey {
+    background: var(--colour-light-grey);
+    color: var(--colour-black);
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.content-container-grey p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.content-container-white p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.content-container-beige p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.content-container-black p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.content-container-blue p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.content-container-light-grey p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+.employee-headshots-and-bios {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.employee-profile {
+    width: 25%;
+}
+
+.employee-headshot {
+    width: 100%;
+    margin-left: -5px;
+    border: 5px solid var(--colour-black);
+}
+
 .footer {
+    position: relative;
     background: var(--colour-beige);
     width: 100vw;
+    max-width: 100%;
     margin: 0;
     padding: 30px 0;
 }
