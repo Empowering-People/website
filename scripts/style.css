@@ -181,6 +181,10 @@ body.dyslexic-font [class*=" fa-"] {
     padding: 30px 0;
 }
 
+.footer a {
+    text-decoration: none;
+}
+
 .footer-info {
     display: flex;
     margin: auto;
