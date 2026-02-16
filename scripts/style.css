@@ -231,29 +231,94 @@ body.dyslexic-font [class*=" fa-"] {
     margin: auto;
     padding: 0;
 }
+
 .content-container-white p {
     width: 80%;
     margin: auto;
     padding: 0;
 }
+
 .content-container-beige p {
     width: 80%;
     margin: auto;
     padding: 0;
 }
+
 .content-container-black p {
     width: 80%;
     margin: auto;
     padding: 0;
 }
+
 .content-container-blue p {
     width: 80%;
     margin: auto;
     padding: 0;
 }
+
 .content-container-light-grey p {
     width: 80%;
     margin: auto;
+    padding: 0;
+}
+
+.content-container-grey hr {
+    background-color: var(--colour-white);
+    color: var(--colour-white);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.content-container-white hr {
+    background-color: var(--colour-black);
+    color: var(--colour-black);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.content-container-beige hr {
+    background-color: var(--colour-black);
+    color: var(--colour-black);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.content-container-black hr {
+    background-color: var(--colour-white);
+    color: var(--colour-white);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.content-container-blue hr {
+    background-color: var(--colour-white);
+    color: var(--colour-white);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+.content-container-light-grey hr {
+    background-color: var(--colour-black);
+    color: var(--colour-black);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
     padding: 0;
 }
 
@@ -271,6 +336,39 @@ body.dyslexic-font [class*=" fa-"] {
     width: 100%;
     margin-left: -5px;
     border: 5px solid var(--colour-black);
+}
+
+.yt-embed {
+    aspect-ratio: 1.85 / 1;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.testimonials-grid {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.testimonials-item {
+    width: 30%;
+    margin: auto;
+}
+
+.values-and-beliefs-grid {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.values-and-beliefs-item {
+    width: 30%;
+    margin: auto;
 }
 
 .footer {
@@ -372,5 +470,15 @@ p {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     margin: 0;
+    padding: 0;
+}
+
+hr {
+    background-color: var(--colour-black);
+    color: var(--colour-black);
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
     padding: 0;
 }
