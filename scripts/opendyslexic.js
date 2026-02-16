@@ -1,4 +1,5 @@
-// This script makes the OpenDyslexic font toggle button at the top of every page work.
+// This script makes the OpenDyslexic font toggle button
+// at the top of every page work.
 
 const toggleButton = document.getElementById("dyslexicFontToggle");
 const body = document.body;
