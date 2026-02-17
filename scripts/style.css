@@ -107,7 +107,7 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .navbar li a {
-    display: block;
+    display: inline-block;
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-size: 1.1rem;
@@ -120,8 +120,7 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .navbar li a:hover {
-    font-size: 1.2rem;
-    font-weight: 600;
+    transform: scale(1.15) rotate(-1deg);
 }
 
 .nav-active {
@@ -380,6 +379,7 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .footer a {
+    display: inline-block;
     text-decoration: none;
 }
 
@@ -398,6 +398,7 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .footer-info-center a {
+    display: inline-block;
     text-decoration: none;
     color: var(--colour-blue);
     font-size: 1.5rem;
@@ -405,7 +406,7 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .footer-info-center a:hover {
-    font-size: 1.75rem;
+    transform: scale(1.15) rotate(-1deg);
 }
 
 .footer-info-right {
@@ -483,11 +484,12 @@ hr {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color: var(--colour-blue);
     transition: 0.25s ease-out;
 }
 
 a:hover {
-    font-size: 116.66666666667%; /* I am aware this is a stupid level of precision. I don't care. */
+    transform: scale(1.15) rotate(-1deg);
 }
