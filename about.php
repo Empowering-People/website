@@ -27,6 +27,7 @@ $heroSubtitle = "Everything you need to know about Empowering People.";
                     <img
                         class="employee-headshot"
                         src="https://placehold.co/1200x1200"
+                        alt="Headshot of Ayana Ritchie. © 2026 Lee McClounnan"
                     />
                     <br />
                     <br />
@@ -59,6 +60,7 @@ $heroSubtitle = "Everything you need to know about Empowering People.";
                     <img
                         class="employee-headshot"
                         src="https://placehold.co/1200x1200"
+                        alt="Headshot of Jodi Codona. © 2026 Lee McClounnan"
                     />
                     <br />
                     <br />
@@ -89,6 +91,7 @@ $heroSubtitle = "Everything you need to know about Empowering People.";
                     <img
                         class="employee-headshot"
                         src="https://placehold.co/1200x1200"
+                        alt="Headshot of Gabriel Sykes. © 2026 Lee McClounnan"
                     />
                     <br />
                     <br />
