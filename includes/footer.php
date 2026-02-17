@@ -1,0 +1,74 @@
+<div class="footer">
+    <div class="footer-info">
+        <p class="footer-info-left">
+            Room 3.09<br />
+            19-21 Gordon Street<br />
+            Glasgow,<br />
+            G1 3PL
+        </p>
+        <p class="footer-info-center">
+            Follow us on Social Media:<br />
+            <a
+                href="https://linkedin.com/company/98934469"
+                target="_blank"
+            >
+                <i class="fa fa-linkedin fa-fw"></i>
+            </a>
+            <a
+                href="https://www.facebook.com/profile.php?id=100095159021685"
+                target="_blank"
+            >
+                <i class="fa fa-facebook fa-fw"></i>
+            </a>
+            <a
+                href="https://www.instagram.com/empowering_people.scotland"
+                target="_blank"
+            >
+                <i class="fa fa-instagram fa-fw"></i>
+            </a>
+            <a
+                href="https://www.youtube.com/@EmpoweringPeopleScotland"
+                target="_blank"
+            >
+                <i class="fa fa-youtube-play fa-fw"></i>
+            </a>
+        </p>
+        <p class="footer-info-right">
+            Business Hours:<br />
+            Mon - Fri: 09:00 - 17:00<br />
+            Sat - Sun: Closed
+        </p>
+    </div>
+    <br />
+    <p class="copyright-notice">
+        © 2026 EMPOWERING PEOPLE-GLASGOW LTD<br />
+        Except where otherwise noted, all content on this domain is
+        licensed under
+        <a
+            href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+            target="_blank"
+        >
+            CC BY-NC-ND 4.0
+        </a>
+        <br />
+        <br />
+        The fonts
+        <a
+            href="https://fonts.google.com/specimen/League+Spartan"
+            target="_blank"
+            >"League Spartan"</a
+        >,
+        <a
+            href="https://fonts.google.com/specimen/Roboto"
+            target="_blank"
+            >"Roboto"</a
+        >, and
+        <a href="https://opendyslexic.org/" target="_blank"
+            >"OpenDyslexic"
+        </a>
+        are licensed under the
+        <a href="https://openfontlicense.org/" target="_blank">
+            SIL Open Font License
+        </a>
+    </p>
+</div>

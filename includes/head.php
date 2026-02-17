@@ -1,0 +1,72 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title><?= $pageTitle ?? "Empowering People Scotland" ?></title>
+    <link rel="stylesheet" href="/scripts/style.css" type="text/css" />
+    <meta
+        name="description"
+        content="Specialist services designed to empower individuals with extra support needs and hidden disabilities, to gain willful employment and lead fulfilling lives."
+    />
+
+    <meta property="og:title" content="Empowering People Scotland" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://empowering-people.co.uk" />
+    <meta property="og:image" content="/images/embedimg.jpg" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <!-- Google Fonts: League Spartan and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- CDNFonts: OpenDyslexic -->
+    <style>
+        @font-face {
+            font-family: "OpenDyslexic";
+            font-style: normal;
+            font-weight: 400;
+            src:
+                local("OpenDyslexic"),
+                url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Regular.woff")
+                    format("woff");
+        }
+        @font-face {
+            font-family: "OpenDyslexic";
+            font-style: italic;
+            font-weight: 400;
+            src:
+                local("OpenDyslexic"),
+                url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Italic.woff")
+                    format("woff");
+        }
+        @font-face {
+            font-family: "OpenDyslexic";
+            font-style: normal;
+            font-weight: 700;
+            src:
+                local("OpenDyslexic"),
+                url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Bold.woff")
+                    format("woff");
+        }
+        @font-face {
+            font-family: "OpenDyslexic";
+            font-style: italic;
+            font-weight: 700;
+            src:
+                local("OpenDyslexic"),
+                url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-BoldItalic.woff")
+                    format("woff");
+        }
+    </style>
+
+    <!-- FontAwesome 4.7.0 -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>

@@ -1,78 +1,14 @@
+<?php
+$pageTitle = "Home | Empowering People Scotland";
+$activePage = "home";
+$heroTitle = "Working Together For a Better Future";
+$heroSubtitle =
+    "Specialist services designed to empower individuals with additional support needs and hidden disabilities, to gain willful employment and lead fulfilling lives.";
+?>
 <!doctype html>
 
-<html lang="en_GB">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <title>Empowering People Scotland</title>
-        <link rel="stylesheet" href="/scripts/style.css" type="text/css" />
-        <meta
-            name="description"
-            content="Specialist services designed to empower individuals with extra support needs and hidden disabilities gain wilful employment and lead fulfilling lives."
-        />
-
-        <meta property="og:title" content="Empowering People Scotland" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://empowering-people.co.uk" />
-        <meta property="og:image" content="/images/embedimg.jpg" />
-
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-
-        <!-- Google Fonts: League Spartan and Roboto -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-
-        <!-- CDNFonts: OpenDyslexic -->
-        <style>
-            @font-face {
-                font-family: "OpenDyslexic";
-                font-style: normal;
-                font-weight: 400;
-                src:
-                    local("OpenDyslexic"),
-                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Regular.woff")
-                        format("woff");
-            }
-            @font-face {
-                font-family: "OpenDyslexic";
-                font-style: italic;
-                font-weight: 400;
-                src:
-                    local("OpenDyslexic"),
-                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Italic.woff")
-                        format("woff");
-            }
-            @font-face {
-                font-family: "OpenDyslexic";
-                font-style: normal;
-                font-weight: 700;
-                src:
-                    local("OpenDyslexic"),
-                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-Bold.woff")
-                        format("woff");
-            }
-            @font-face {
-                font-family: "OpenDyslexic";
-                font-style: italic;
-                font-weight: 700;
-                src:
-                    local("OpenDyslexic"),
-                    url("https://fonts.cdnfonts.com/s/19808/OpenDyslexic-BoldItalic.woff")
-                        format("woff");
-            }
-        </style>
-
-        <!-- FontAwesome 4.7.0 -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-    </head>
+<html lang="en-GB">
+    <?php require $_SERVER["DOCUMENT_ROOT"] . "/includes/head.php"; ?>
     <!--
         To whomever has the job of maintaining this site when I'm gone:
 
@@ -134,50 +70,8 @@
         >
             <p class="toggle-text">Toggle Dyslexia<br />Friendly Font</p>
         </button>
-        <div class="hero-banner-home">
-            <div class="hero-header">
-                <ul class="navbar">
-                    <li><a href="/index.html" class="nav-active">Home</a></li>
-                    <li>
-                        <a href="/about.html" class="nav-inactive">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/our-work.html" class="nav-inactive"
-                            >What We Do</a
-                        >
-                    </li>
-                    <li>
-                        <a href="/contact.html" class="nav-inactive"
-                            >Contact Us</a
-                        >
-                    </li>
-                    <li>
-                        <a href="/hidden-disability.html" class="nav-inactive">
-                            What We Mean By Hidden Disability
-                        </a>
-                    </li>
-                </ul>
-                <div class="logo-container">
-                    <a class="logo-anchor" href="/index.html">
-                        <img
-                            class="logo-image"
-                            src="/images/logo.png"
-                            alt="Empowering People Logo"
-                        />
-                    </a>
-                </div>
-            </div>
-            <div class="hero-cover-text">
-                <h2>Working Together For a Better Future</h2>
-                <h5>
-                    <i>
-                        Specialist services designed to empower individuals with
-                        additional support needs and hidden disabilities, to
-                        gain willful employment and lead fulfilling lives.
-                    </i>
-                </h5>
-            </div>
-        </div>
+        <?php require $_SERVER["DOCUMENT_ROOT"] .
+            "/includes/hero-banner.php"; ?>
         <div class="content-container-grey">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
@@ -292,80 +186,7 @@
                 Ad litora torquent per conubia nostra inceptos himenaeos.
             </p>
         </div>
-        <div class="footer">
-            <div class="footer-info">
-                <p class="footer-info-left">
-                    Room 3.09<br />
-                    19-21 Gordon Street<br />
-                    Glasgow,<br />
-                    G1 3PL
-                </p>
-                <p class="footer-info-center">
-                    Follow us on Social Media:<br />
-                    <a
-                        href="https://linkedin.com/company/98934469"
-                        target="_blank"
-                    >
-                        <i class="fa fa-linkedin fa-fw"></i>
-                    </a>
-                    <a
-                        href="https://www.facebook.com/profile.php?id=100095159021685"
-                        target="_blank"
-                    >
-                        <i class="fa fa-facebook fa-fw"></i>
-                    </a>
-                    <a
-                        href="https://www.instagram.com/empowering_people.scotland"
-                        target="_blank"
-                    >
-                        <i class="fa fa-instagram fa-fw"></i>
-                    </a>
-                    <a
-                        href="https://www.youtube.com/@EmpoweringPeopleScotland"
-                        target="_blank"
-                    >
-                        <i class="fa fa-youtube-play fa-fw"></i>
-                    </a>
-                </p>
-                <p class="footer-info-right">
-                    Business Hours:<br />
-                    Mon - Fri: 09:00 - 17:00<br />
-                    Sat - Sun: Closed
-                </p>
-            </div>
-            <br />
-            <p class="copyright-notice">
-                © 2026 EMPOWERING PEOPLE-GLASGOW LTD<br />
-                Except where otherwise noted, all content on this domain is
-                licensed under
-                <a
-                    href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-                    target="_blank"
-                >
-                    CC BY-NC-ND 4.0
-                </a>
-                <br />
-                <br />
-                The fonts
-                <a
-                    href="https://fonts.google.com/specimen/League+Spartan"
-                    target="_blank"
-                    >"League Spartan"</a
-                >,
-                <a
-                    href="https://fonts.google.com/specimen/Roboto"
-                    target="_blank"
-                    >"Roboto"</a
-                >, and
-                <a href="https://opendyslexic.org/" target="_blank"
-                    >"OpenDyslexic"
-                </a>
-                are licensed under the
-                <a href="https://openfontlicense.org/" target="_blank">
-                    SIL Open Font License
-                </a>
-            </p>
-        </div>
+        <?php require $_SERVER["DOCUMENT_ROOT"] . "/includes/footer.php"; ?>
         <script src="/scripts/opendyslexic.js"></script>
     </body>
 </html>
