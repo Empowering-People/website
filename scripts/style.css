@@ -27,7 +27,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /*overflow-x: hidden; /* NOTE: This is the stupid fix, and should absolutely be treated as a temporary solution. */
     font-family: "Roboto", sans-serif;
 }
 
@@ -46,7 +45,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: 0.25s;
+    transition: 0.25s ease-out;
 }
 
 .dyslexic-font-toggle:hover {
@@ -117,7 +116,7 @@ body.dyslexic-font [class*=" fa-"] {
     width: fit-content;
     background: transparent;
     color: var(--colour-white);
-    transition: 0.25s;
+    transition: 0.25s ease-out;
 }
 
 .navbar li a:hover {
@@ -402,7 +401,7 @@ body.dyslexic-font [class*=" fa-"] {
     text-decoration: none;
     color: var(--colour-blue);
     font-size: 1.5rem;
-    transition: 0.25s;
+    transition: 0.25s ease-out;
 }
 
 .footer-info-center a:hover {
@@ -481,4 +480,14 @@ hr {
     border-width: 0;
     margin: 25px auto;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colour-blue);
+    transition: 0.25s ease-out;
+}
+
+a:hover {
+    font-size: 116.66666666667%; /* I am aware this is a stupid level of precision. I don't care. */
 }
