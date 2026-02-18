@@ -11,9 +11,8 @@ $heroSubtitle =
     <?php require $_SERVER["DOCUMENT_ROOT"] . "/includes/head.php"; ?>
     <body>
         <?php require $_SERVER["DOCUMENT_ROOT"] .
-            "/includes/dyslexic-font-toggle.php"; ?>
-        <?php require $_SERVER["DOCUMENT_ROOT"] .
-            "/includes/hero-banner.php"; ?>
+        "/includes/dyslexic-font-toggle.php"; ?> <?php require
+        $_SERVER["DOCUMENT_ROOT"] . "/includes/hero-banner.php"; ?>
         <div class="content-container-grey">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque

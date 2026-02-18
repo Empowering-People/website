@@ -96,7 +96,6 @@ body.dyslexic-font [class*=" fa-"] {
     margin: 0;
     margin-top: 2.5%;
     padding: 0;
-    overflow: hidden;
     background-color: transparent;
     width: fit-content;
     float: right;
@@ -155,6 +154,7 @@ body.dyslexic-font [class*=" fa-"] {
     text-decoration: none;
     background: transparent;
     width: fit-content;
+    transform: none !important;
 }
 
 .logo-anchor:active {
