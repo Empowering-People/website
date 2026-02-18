@@ -1,7 +1,7 @@
 # This Docker Compose file is not for production use, it's purely here as a test environment.
 services:
   jekyll:
-    image: jekyll/jekyll:4.2
+    image: jekyll/jekyll:4.2.0
     command: jekyll serve --watch --force_polling --drafts
     ports:
       - "4000:4000"
