@@ -1,0 +1,15 @@
+title: Empowering People Scotland
+description: Specialist services designed to empower individuals with extra support needs and hidden disabilities, to gain willful employment and lead fulfilling lives.
+url: https://empowering-people.co.uk
+baseurl: ""
+
+permalink: pretty
+
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - _config.yml
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
