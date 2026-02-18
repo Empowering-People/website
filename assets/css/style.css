@@ -78,7 +78,7 @@ body.dyslexic-font [class*=" fa-"] {
     padding: 60px 0;
     background:
         linear-gradient(90deg, var(--colour-blue), rgba(0, 0, 0, 0.5)),
-        url(/images/placeholder.jpg);
+        url(/assets/images/placeholder.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
