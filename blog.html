@@ -8,10 +8,15 @@ heroSubtitle: Updates and/or musings from us to you.
 
 <div class="content-container-white">
     <ul class="list-none">
-        {% for post in site.posts %}
+        {% for post in site.posts limit:3 %}
         <li>
+            <a class="blog-link" href="{{ post.url }}" target="_blank"
+                >Open post in new tab</a
+            >
             <iframe class="blog-iframe" src="{{ post.url }}"></iframe>
+            <br />
         </li>
         {% endfor %}
     </ul>
+    <a class="text-center" href="/blog/old-posts">View older posts</a>
 </div>
