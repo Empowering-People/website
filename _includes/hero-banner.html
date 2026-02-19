@@ -38,6 +38,13 @@
             </li>
             <li>
                 <a
+                    href="/blog"
+                    class="{% if page.activePage == 'blog' %}nav-active{% else %}nav-inactive{% endif %}"
+                    >Blog</a
+                >
+            </li>
+            <li>
+                <a
                     href="/contribute"
                     class="{% if page.activePage == 'contribute' %}nav-active{% else %}nav-inactive{% endif %}"
                     >Contribute To Our Website</a

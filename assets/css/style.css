@@ -1,12 +1,12 @@
 :root {
     font-size: 18px;
 
-    --colour-grey: rgba(42, 40, 41, 1);
-    --colour-white: rgba(255, 255, 255, 1);
-    --colour-beige: rgba(224, 224, 218, 1);
-    --colour-black: rgba(0, 0, 0, 1);
-    --colour-blue: rgba(22, 26, 64, 1);
-    --colour-light-grey: rgba(156, 155, 155, 1);
+    --ep-navy: #1b3d72;
+    --ep-slate: #292628;
+    --ep-cream: #e5e2d6;
+    --ep-ink: #1a1918;
+    --ep-silver: #9e9c9c;
+    --ep-white: #f5f5f5;
 }
 
 /*
@@ -35,8 +35,8 @@ body {
     top: 15px;
     right: 15px;
     z-index: 1000;
-    background: var(--colour-blue);
-    color: var(--colour-white);
+    background: var(--ep-navy);
+    color: var(--ep-white);
     border: transparent;
     border-radius: 12px;
     margin: 0;
@@ -49,8 +49,8 @@ body {
 }
 
 .dyslexic-font-toggle:hover {
-    background: var(--colour-white);
-    color: var(--colour-black);
+    background: var(--ep-white);
+    color: var(--ep-ink);
 }
 
 .dyslexic-font-toggle .toggle-text {
@@ -77,7 +77,7 @@ body.dyslexic-font [class*=" fa-"] {
     margin: 0;
     padding: 60px 0;
     background:
-        linear-gradient(90deg, var(--colour-blue), rgba(0, 0, 0, 0.5)),
+        linear-gradient(90deg, var(--ep-navy), rgba(0, 0, 0, 0.5)),
         url(/assets/images/placeholder.jpg);
     background-position: center;
     background-size: cover;
@@ -114,7 +114,7 @@ body.dyslexic-font [class*=" fa-"] {
     padding: 10px;
     width: fit-content;
     background: transparent;
-    color: var(--colour-white);
+    color: var(--ep-white);
     transition: 0.25s ease-out;
 }
 
@@ -168,55 +168,55 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .hero-cover-text {
-    color: var(--colour-white);
+    color: var(--ep-white);
     width: 99%;
     margin: 0 auto;
     text-align: center;
 }
 
 .content-container-grey {
-    background: var(--colour-grey);
-    color: var(--colour-white);
+    background: var(--ep-slate);
+    color: var(--ep-white);
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 50px 0;
 }
 .content-container-white {
-    background: var(--colour-white);
-    color: var(--colour-black);
+    background: var(--ep-white);
+    color: var(--ep-ink);
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 50px 0;
 }
 .content-container-beige {
-    background: var(--colour-beige);
-    color: var(--colour-black);
+    background: var(--ep-cream);
+    color: var(--ep-ink);
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 50px 0;
 }
 .content-container-black {
-    background: var(--colour-black);
-    color: var(--colour-white);
+    background: var(--ep-ink);
+    color: var(--ep-white);
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 50px 0;
 }
 .content-container-blue {
-    background: var(--colour-blue);
-    color: var(--colour-white);
+    background: var(--ep-navy);
+    color: var(--ep-white);
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 50px 0;
 }
 .content-container-light-grey {
-    background: var(--colour-light-grey);
-    color: var(--colour-black);
+    background: var(--ep-silver);
+    color: var(--ep-ink);
     position: relative;
     width: 100vw;
     max-width: 100%;
@@ -261,8 +261,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-grey hr {
-    background-color: var(--colour-white);
-    color: var(--colour-white);
+    background-color: var(--ep-white);
+    color: var(--ep-white);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -271,8 +271,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-white hr {
-    background-color: var(--colour-black);
-    color: var(--colour-black);
+    background-color: var(--ep-ink);
+    color: var(--ep-ink);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -281,8 +281,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-beige hr {
-    background-color: var(--colour-black);
-    color: var(--colour-black);
+    background-color: var(--ep-ink);
+    color: var(--ep-ink);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -291,8 +291,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-black hr {
-    background-color: var(--colour-white);
-    color: var(--colour-white);
+    background-color: var(--ep-white);
+    color: var(--ep-white);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -301,8 +301,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-blue hr {
-    background-color: var(--colour-white);
-    color: var(--colour-white);
+    background-color: var(--ep-white);
+    color: var(--ep-white);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -311,8 +311,8 @@ body.dyslexic-font [class*=" fa-"] {
 }
 
 .content-container-light-grey hr {
-    background-color: var(--colour-black);
-    color: var(--colour-black);
+    background-color: var(--ep-ink);
+    color: var(--ep-ink);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -333,7 +333,7 @@ body.dyslexic-font [class*=" fa-"] {
 .employee-headshot {
     width: 100%;
     margin-left: -5px;
-    border: 5px solid var(--colour-black);
+    border: 5px solid var(--ep-ink);
 }
 
 .yt-embed {
@@ -369,9 +369,51 @@ body.dyslexic-font [class*=" fa-"] {
     margin: auto;
 }
 
+.blog-iframe {
+    display: block;
+    aspect-ratio: 16 / 9;
+    width: 60%;
+    margin: auto;
+}
+
+.blog-post {
+    background: var(--ep-cream);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.blog-post h1 {
+    text-align: center;
+}
+
+.blog-post h2 {
+    text-align: center;
+}
+
+.blog-post h3 {
+    text-align: center;
+}
+
+.blog-post h4 {
+    text-align: center;
+}
+
+.blog-post h5 {
+    text-align: center;
+}
+
+.blog-post h6 {
+    text-align: center;
+}
+
+.blog-post p {
+    width: 80%;
+    margin: auto;
+}
+
 .footer {
     position: relative;
-    background: var(--colour-beige);
+    background: var(--ep-cream);
     width: 100vw;
     max-width: 100%;
     margin: 0;
@@ -400,7 +442,7 @@ body.dyslexic-font [class*=" fa-"] {
 .footer-info-center a {
     display: inline-block;
     text-decoration: none;
-    color: var(--colour-blue);
+    color: var(--ep-navy);
     font-size: 1.5rem;
     transition: 0.25s ease-out;
 }
@@ -474,8 +516,8 @@ p {
 }
 
 hr {
-    background-color: var(--colour-black);
-    color: var(--colour-black);
+    background-color: var(--ep-ink);
+    color: var(--ep-ink);
     width: 85%;
     height: 1px;
     border-width: 0;
@@ -486,7 +528,7 @@ hr {
 a {
     display: inline-block;
     text-decoration: none;
-    color: var(--colour-blue);
+    color: var(--ep-navy);
     transition: 0.25s ease-out;
 }
 

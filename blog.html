@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog | Empowering People
+activePage: blog
+heroTitle: Our Blog
+heroSubtitle: Updates and/or musings from us to you.
+---
+
+<div class="content-container-white">
+    <ul style="list-style-type: none">
+        {% for post in site.posts %}
+        <li>
+            <iframe class="blog-iframe" src="{{ post.url }}"></iframe>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
