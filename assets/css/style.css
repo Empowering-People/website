@@ -22,487 +22,16 @@
         Black      = 900
 */
 
+/* =============================================
+   Reset / Base
+   ============================================= */
+
 html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: "Roboto", sans-serif;
-}
-
-.dyslexic-font-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
-    background: var(--ep-navy);
-    color: var(--ep-white);
-    border: transparent;
-    border-radius: 12px;
-    margin: 0;
-    padding: 12px;
-    font-family: "OpenDyslexic", sans-serif;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: 0.25s ease-out;
-}
-
-.dyslexic-font-toggle:hover {
-    background: var(--ep-white);
-    color: var(--ep-ink);
-}
-
-.dyslexic-font-toggle .toggle-text {
-    font-family: "OpenDyslexic", sans-serif;
-}
-
-/* OpenDyslexic Mode, toggled by button at top right of every page. */
-body.dyslexic-font,
-body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
-    font-family: "OpenDyslexic", sans-serif !important;
-}
-
-.hero-banner {
-    position: relative;
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 60px 0;
-    background:
-        linear-gradient(90deg, var(--ep-navy), rgba(0, 0, 0, 0.5)),
-        url(/assets/images/placeholder.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-header {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    padding: 0;
-}
-
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    margin-top: 2.5%;
-    padding: 0;
-    background-color: transparent;
-    width: fit-content;
-    float: right;
-}
-
-.navbar li {
-    float: left;
-}
-
-.navbar li a {
-    display: inline-block;
-    text-align: center;
-    font-family: "League Spartan", sans-serif;
-    font-size: 1.1rem;
-    margin: 0 5px;
-    padding: 10px;
-    width: fit-content;
-    background: transparent;
-    color: var(--ep-white);
-    transition: 0.25s ease-out;
-}
-
-.navbar li a:hover {
-    transform: scale(1.15) rotate(-1deg);
-}
-
-.nav-active {
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-.nav-inactive {
-    font-weight: 400;
-    text-decoration: none;
-}
-
-.logo-container {
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-}
-
-.logo-anchor:link {
-    text-decoration: none;
-    background: transparent;
-    width: fit-content;
-}
-
-.logo-anchor:visited {
-    text-decoration: none;
-    background: transparent;
-    width: fit-content;
-}
-
-.logo-anchor:hover {
-    text-decoration: none;
-    background: transparent;
-    width: fit-content;
-    transform: none !important;
-}
-
-.logo-anchor:active {
-    text-decoration: none;
-    background: transparent;
-    width: fit-content;
-}
-
-.logo-image {
-    width: 80%;
-}
-
-.hero-cover-text {
-    color: var(--ep-white);
-    width: 99%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.content-container-grey {
-    background: var(--ep-slate);
-    color: var(--ep-white);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-.content-container-white {
-    background: var(--ep-white);
-    color: var(--ep-ink);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-.content-container-beige {
-    background: var(--ep-cream);
-    color: var(--ep-ink);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-.content-container-black {
-    background: var(--ep-ink);
-    color: var(--ep-white);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-.content-container-blue {
-    background: var(--ep-navy);
-    color: var(--ep-white);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-.content-container-light-grey {
-    background: var(--ep-silver);
-    color: var(--ep-ink);
-    position: relative;
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 50px 0;
-}
-
-.content-container-grey p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-white p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-beige p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-black p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-blue p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-light-grey p {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-.content-container-grey hr {
-    background-color: var(--ep-white);
-    color: var(--ep-white);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.content-container-white hr {
-    background-color: var(--ep-ink);
-    color: var(--ep-ink);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.content-container-beige hr {
-    background-color: var(--ep-ink);
-    color: var(--ep-ink);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.content-container-black hr {
-    background-color: var(--ep-white);
-    color: var(--ep-white);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.content-container-blue hr {
-    background-color: var(--ep-white);
-    color: var(--ep-white);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.content-container-light-grey hr {
-    background-color: var(--ep-ink);
-    color: var(--ep-ink);
-    width: 85%;
-    height: 1px;
-    border-width: 0;
-    margin: 25px auto;
-    padding: 0;
-}
-
-.employee-headshots-and-bios {
-    display: flex;
-    margin: auto;
-    justify-content: space-evenly;
-}
-
-.employee-profile {
-    width: 25%;
-}
-
-.employee-headshot {
-    width: 100%;
-    margin-left: -5px;
-    border: 5px solid var(--ep-ink);
-}
-
-.yt-embed {
-    aspect-ratio: 1.85 / 1;
-    width: 80%;
-    height: auto;
-    margin: auto;
-}
-
-.testimonials-grid {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.testimonials-item {
-    width: 30%;
-    margin: auto;
-}
-
-.values-and-beliefs-grid {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.values-and-beliefs-item {
-    width: 30%;
-    margin: auto;
-}
-
-.blog-iframe {
-    display: block;
-    aspect-ratio: 16 / 9;
-    width: 60%;
-    margin: auto;
-}
-
-.blog-post {
-    background: var(--ep-cream);
-    min-height: 100vh;
-    padding: 40px 0;
-}
-
-.blog-post h1 {
-    text-align: center;
-}
-
-.blog-post h2 {
-    text-align: center;
-}
-
-.blog-post h3 {
-    text-align: center;
-}
-
-.blog-post h4 {
-    text-align: center;
-}
-
-.blog-post h5 {
-    text-align: center;
-}
-
-.blog-post h6 {
-    text-align: center;
-}
-
-.blog-post p {
-    width: 80%;
-    margin: auto;
-}
-
-.footer {
-    position: relative;
-    background: var(--ep-cream);
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    padding: 30px 0;
-}
-
-.footer a {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.footer-info {
-    display: flex;
-    margin: auto;
-    justify-content: space-evenly;
-}
-
-.footer-info-left {
-    text-align: left;
-}
-
-.footer-info-center {
-    text-align: center;
-}
-
-.footer-info-center a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--ep-navy);
-    font-size: 1.5rem;
-    transition: 0.25s ease-out;
-}
-
-.footer-info-center a:hover {
-    transform: scale(1.15) rotate(-1deg);
-}
-
-.footer-info-right {
-    text-align: right;
-}
-
-.copyright-notice {
-    text-align: center;
-}
-
-/* =============================================
-   Utility classes (replacing inline styles)
-   ============================================= */
-
-/* Text alignment */
-.text-center {
-    text-align: center;
-}
-
-/* Standard 80%-width, auto-margin block — for headings and lists inside content containers */
-.section-title {
-    width: 80%;
-    margin: auto;
-}
-
-/* Lists inside content containers */
-.content-list {
-    width: 80%;
-    margin: auto;
-}
-
-/* Unstyled list (no bullets, no padding) */
-.list-none {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Short horizontal divider used inside cards */
-hr.divider-short {
-    width: 25%;
-    margin: 0;
-}
-
-/* Optional minimum height modifier for content containers */
-.min-h-50vh {
-    min-height: 50vh;
-}
-
-/* =============================================
-   Component-level rules replacing inline styles
-   ============================================= */
-
-/* Testimonial card headings need a small bottom gap */
-.testimonials-item h5 {
-    margin-bottom: 0.5rex;
-}
-
-/* Paragraphs inside cards should not carry the default margin */
-.testimonials-item p,
-.values-and-beliefs-item p {
-    margin: 0;
 }
 
 h1 {
@@ -580,4 +109,554 @@ a {
 
 a:hover {
     transform: scale(1.15) rotate(-1deg);
+}
+
+/* =============================================
+   OpenDyslexic toggle
+   ============================================= */
+
+.dyslexic-font-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background: var(--ep-navy);
+    color: var(--ep-white);
+    border: transparent;
+    border-radius: 12px;
+    margin: 0;
+    padding: 12px;
+    font-family: "OpenDyslexic", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.25s ease-out;
+}
+
+.dyslexic-font-toggle:hover {
+    background: var(--ep-white);
+    color: var(--ep-ink);
+}
+
+.dyslexic-font-toggle .toggle-text {
+    font-family: "OpenDyslexic", sans-serif;
+}
+
+/* OpenDyslexic mode, toggled by button at top right of every page. */
+body.dyslexic-font,
+body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
+    font-family: "OpenDyslexic", sans-serif !important;
+}
+
+/* =============================================
+   Hero banner
+   ============================================= */
+
+.hero-banner {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 60px 0;
+    background:
+        linear-gradient(90deg, var(--ep-navy), rgba(0, 0, 0, 0.5)),
+        url(/assets/images/placeholder.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-header {
+    width: 90%;
+    margin: 0 auto 30px;
+    padding: 0;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 2.5% 0 0;
+    padding: 0;
+    background-color: transparent;
+    width: fit-content;
+    float: right;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: inline-block;
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.1rem;
+    margin: 0 5px;
+    padding: 10px;
+    width: fit-content;
+    background: transparent;
+    color: var(--ep-white);
+    transition: 0.25s ease-out;
+}
+
+.navbar li a:hover {
+    transform: scale(1.15) rotate(-1deg);
+}
+
+.nav-active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav-inactive {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.logo-container {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-anchor {
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+}
+
+.logo-anchor:hover {
+    transform: none !important;
+}
+
+.logo-image {
+    width: 80%;
+}
+
+.hero-cover-text {
+    color: var(--ep-white);
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =============================================
+   Content containers
+   ============================================= */
+
+/*
+    Base styles shared by every content container.
+    Colour theming is handled by the modifier classes below.
+*/
+[class^="content-container-"] {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+}
+
+[class^="content-container-"] p,
+[class^="content-container-"] ul {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+[class^="content-container-"] hr {
+    width: 85%;
+    height: 1px;
+    border-width: 0;
+    margin: 25px auto;
+    padding: 0;
+}
+
+/* Light backgrounds — dark text, dark rule */
+.content-container-white,
+.content-container-beige,
+.content-container-light-grey {
+    color: var(--ep-ink);
+}
+
+.content-container-white hr,
+.content-container-beige hr,
+.content-container-light-grey hr {
+    background-color: var(--ep-ink);
+    color: var(--ep-ink);
+}
+
+/* Dark backgrounds — light text, light rule */
+.content-container-grey,
+.content-container-black,
+.content-container-blue {
+    color: var(--ep-white);
+}
+
+.content-container-grey hr,
+.content-container-black hr,
+.content-container-blue hr {
+    background-color: var(--ep-white);
+    color: var(--ep-white);
+}
+
+/* Background colours */
+.content-container-white {
+    background: var(--ep-white);
+}
+.content-container-beige {
+    background: var(--ep-cream);
+}
+.content-container-grey {
+    background: var(--ep-slate);
+}
+.content-container-black {
+    background: var(--ep-ink);
+}
+.content-container-blue {
+    background: var(--ep-navy);
+}
+.content-container-light-grey {
+    background: var(--ep-silver);
+    position: relative;
+}
+
+/* =============================================
+   About page — headshots & bios
+   ============================================= */
+
+.employee-headshots-and-bios {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.employee-profile {
+    width: 25%;
+}
+
+.employee-headshot {
+    width: 100%;
+    margin-left: -5px;
+    border: 5px solid var(--ep-ink);
+}
+
+/* =============================================
+   About page — testimonials & values grids
+   ============================================= */
+
+.testimonials-grid,
+.values-and-beliefs-grid {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.testimonials-item,
+.values-and-beliefs-item {
+    width: 30%;
+    margin: auto;
+}
+
+.testimonials-item h5 {
+    margin-bottom: 0.5rex;
+}
+
+.testimonials-item p,
+.values-and-beliefs-item p {
+    margin: 0;
+}
+
+/* =============================================
+   About page — YouTube embed
+   ============================================= */
+
+.yt-embed {
+    aspect-ratio: 1.85 / 1;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+/* =============================================
+   Blog
+   ============================================= */
+
+.blog-iframe {
+    display: block;
+    aspect-ratio: 16 / 9;
+    width: 60%;
+    margin: auto;
+}
+
+.blog-post {
+    background: var(--ep-cream);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
+    text-align: center;
+}
+
+.blog-post p {
+    width: 80%;
+    margin: auto;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+
+.footer {
+    position: relative;
+    background: var(--ep-cream);
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.footer-info {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.footer-info-left {
+    text-align: left;
+}
+.footer-info-right {
+    text-align: right;
+}
+
+.footer-info-center {
+    text-align: center;
+}
+
+.footer-info-center a {
+    color: var(--ep-navy);
+    font-size: 1.5rem;
+}
+
+.footer-info-center a:hover {
+    transform: scale(1.15) rotate(-1deg);
+}
+
+.copyright-notice {
+    text-align: center;
+}
+
+/* =============================================
+   Utility classes
+   ============================================= */
+
+.text-center {
+    text-align: center;
+}
+.min-h-50vh {
+    min-height: 50vh;
+}
+
+/* Standard 80%-width, auto-margin block for headings inside content containers */
+.section-title {
+    width: 80%;
+    margin: auto;
+}
+
+/* Lists inside content containers */
+.content-list {
+    width: 80%;
+    margin: auto;
+}
+
+/* Unstyled list */
+.list-none {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Short horizontal divider used inside cards */
+hr.divider-short {
+    width: 25%;
+    margin: 0;
+}
+
+/* =============================================
+   Responsive — collapse grids
+   (employee headshots, testimonials, values)
+   ============================================= */
+
+@media (max-width: 900px) {
+    .employee-headshots-and-bios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employee-profile {
+        width: 75%;
+        margin-bottom: 40px;
+    }
+
+    .employee-profile:last-child {
+        margin-bottom: 0;
+    }
+
+    .testimonials-grid,
+    .values-and-beliefs-grid {
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+    }
+
+    .testimonials-item,
+    .values-and-beliefs-item {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* =============================================
+   Responsive — mobile layout
+   ============================================= */
+
+@media (max-width: 768px) {
+    /* --- Typography --- */
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.35rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    h6 {
+        font-size: 1.1rem;
+    }
+
+    /* --- Dyslexic font toggle --- */
+
+    /* Shrink the button so it doesn't eat into the hero on small screens */
+    .dyslexic-font-toggle {
+        padding: 8px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .dyslexic-font-toggle .toggle-text {
+        font-size: 0.75rem;
+    }
+
+    /* --- Hero banner --- */
+
+    .hero-banner {
+        padding: 20px 0 30px;
+    }
+
+    /*
+        Switch to a flex column so we can reverse DOM order:
+        navbar comes first in the HTML (floated right on desktop),
+        logo-container comes second. column-reverse puts the logo
+        on top and the nav links below, which is the natural mobile order.
+    */
+    .hero-header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .logo-image {
+        width: 55%;
+        max-width: 220px;
+    }
+
+    /* Replace the float-based horizontal list with a centred wrapping row */
+    .navbar {
+        float: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .navbar li {
+        float: none;
+    }
+
+    .navbar li a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+        margin: 3px 2px;
+    }
+
+    /* --- Content containers --- */
+
+    [class^="content-container-"] {
+        padding: 30px 0;
+    }
+
+    [class^="content-container-"] p,
+    [class^="content-container-"] ul {
+        width: 90%;
+    }
+
+    [class^="content-container-"] hr {
+        width: 90%;
+    }
+
+    .section-title,
+    .content-list {
+        width: 90%;
+    }
+
+    /* --- YouTube embed --- */
+
+    .yt-embed {
+        width: 95%;
+    }
+
+    /* --- Blog --- */
+
+    .blog-iframe {
+        width: 95%;
+    }
+
+    .blog-post p {
+        width: 90%;
+    }
+
+    /* --- Footer --- */
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Override the left/right text-align so all three columns centre on mobile */
+    .footer-info-left,
+    .footer-info-right {
+        text-align: center;
+    }
 }
