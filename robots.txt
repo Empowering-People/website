@@ -1,0 +1,4 @@
+User-agent *
+Allow: /
+
+Sitemap: https://empowering-people.co.uk/sitemap.xml
