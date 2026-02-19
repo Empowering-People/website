@@ -459,6 +459,59 @@ body.dyslexic-font [class*=" fa-"] {
     text-align: center;
 }
 
+/* =============================================
+   Utility classes (replacing inline styles)
+   ============================================= */
+
+/* Text alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Standard 80%-width, auto-margin block — for headings and lists inside content containers */
+.section-title {
+    width: 80%;
+    margin: auto;
+}
+
+/* Lists inside content containers */
+.content-list {
+    width: 80%;
+    margin: auto;
+}
+
+/* Unstyled list (no bullets, no padding) */
+.list-none {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Short horizontal divider used inside cards */
+hr.divider-short {
+    width: 25%;
+    margin: 0;
+}
+
+/* Optional minimum height modifier for content containers */
+.min-h-50vh {
+    min-height: 50vh;
+}
+
+/* =============================================
+   Component-level rules replacing inline styles
+   ============================================= */
+
+/* Testimonial card headings need a small bottom gap */
+.testimonials-item h5 {
+    margin-bottom: 0.5rex;
+}
+
+/* Paragraphs inside cards should not carry the default margin */
+.testimonials-item p,
+.values-and-beliefs-item p {
+    margin: 0;
+}
+
 h1 {
     font-size: 3rem;
     font-family: "League Spartan", sans-serif;
