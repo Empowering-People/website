@@ -59,15 +59,8 @@ body {
 
 /* OpenDyslexic Mode, toggled by button at top right of every page. */
 body.dyslexic-font,
-body.dyslexic-font * {
+body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     font-family: "OpenDyslexic", sans-serif !important;
-}
-
-/* Exclude FontAwesome icons from OpenDyslexic Mode. */
-body.dyslexic-font .fa,
-body.dyslexic-font [class^="fa-"],
-body.dyslexic-font [class*=" fa-"] {
-    font-family: "FontAwesome" !important;
 }
 
 .hero-banner {
