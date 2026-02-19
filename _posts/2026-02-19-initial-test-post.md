@@ -1,5 +1,6 @@
 ---
 layout: post
+sitemap: false
 title: "Initial test post"
 author: "Gabriel Sykes"
 ---
