@@ -388,7 +388,7 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     margin: auto;
 }
 
-.blog-link {
+.blog-link-container {
     display: block;
     width: 60%;
     margin: auto;
