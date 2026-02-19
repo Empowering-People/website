@@ -271,28 +271,28 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 
 /* Light backgrounds — dark text, dark rule */
 .content-container-white,
-.content-container-beige,
-.content-container-light-grey {
+.content-container-cream,
+.content-container-silver {
     color: var(--ep-ink);
 }
 
 .content-container-white hr,
-.content-container-beige hr,
-.content-container-light-grey hr {
+.content-container-cream hr,
+.content-container-silver hr {
     background-color: var(--ep-ink);
     color: var(--ep-ink);
 }
 
 /* Dark backgrounds — light text, light rule */
-.content-container-grey,
-.content-container-black,
-.content-container-blue {
+.content-container-slate,
+.content-container-ink,
+.content-container-navy {
     color: var(--ep-white);
 }
 
-.content-container-grey hr,
-.content-container-black hr,
-.content-container-blue hr {
+.content-container-slate hr,
+.content-container-ink hr,
+.content-container-navy hr {
     background-color: var(--ep-white);
     color: var(--ep-white);
 }
@@ -301,19 +301,19 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 .content-container-white {
     background: var(--ep-white);
 }
-.content-container-beige {
+.content-container-cream {
     background: var(--ep-cream);
 }
-.content-container-grey {
+.content-container-slate {
     background: var(--ep-slate);
 }
-.content-container-black {
+.content-container-ink {
     background: var(--ep-ink);
 }
-.content-container-blue {
+.content-container-navy {
     background: var(--ep-navy);
 }
-.content-container-light-grey {
+.content-container-silver {
     background: var(--ep-silver);
     position: relative;
 }
