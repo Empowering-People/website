@@ -1,61 +1,65 @@
-<div class="hero-banner">
-    <div class="hero-header">
-        <ul class="navbar">
-            <li>
-                <a
-                    href="/"
-                    class="{% if page.activePage == 'home' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >Home</a
-                >
-            </li>
-            <li>
-                <a
-                    href="/about"
-                    class="{% if page.activePage == 'about' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >About Us</a
-                >
-            </li>
-            <li>
-                <a
-                    href="/our-work"
-                    class="{% if page.activePage == 'our-work' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >What We Do</a
-                >
-            </li>
-            <li>
-                <a
-                    href="/contact"
-                    class="{% if page.activePage == 'contact' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >Contact Us</a
-                >
-            </li>
-            <li>
-                <a
-                    href="/hidden-disability"
-                    class="{% if page.activePage == 'hidden-disability' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >What We Mean By Hidden Disability</a
-                >
-            </li>
-            <li>
-                <a
-                    href="/blog"
-                    class="{% if page.activePage == 'blog' %}nav-active{% else %}nav-inactive{% endif %}"
-                    >Blog</a
-                >
-            </li>
-        </ul>
-        <div class="logo-container">
-            <a class="logo-anchor" href="/">
-                <img
-                    class="logo-image"
-                    src="/assets/images/logo.png"
-                    alt="Empowering People Logo"
-                />
-            </a>
+<header>
+    <div class="hero-banner">
+        <div class="hero-header">
+            <nav>
+                <ul class="navbar">
+                    <li>
+                        <a
+                            href="/"
+                            class="{% if page.activePage == 'home' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/about"
+                            class="{% if page.activePage == 'about' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/our-work"
+                            class="{% if page.activePage == 'our-work' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >What We Do</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/contact"
+                            class="{% if page.activePage == 'contact' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >Contact Us</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/hidden-disability"
+                            class="{% if page.activePage == 'hidden-disability' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >What We Mean By Hidden Disability</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/blog"
+                            class="{% if page.activePage == 'blog' %}nav-active{% else %}nav-inactive{% endif %}"
+                            >Blog</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="logo-container">
+                <a class="logo-anchor" href="/">
+                    <img
+                        class="logo-image"
+                        src="/assets/images/logo.png"
+                        alt="Empowering People Logo"
+                    />
+                </a>
+            </div>
+        </div>
+        <div class="hero-cover-text">
+            <h2>{{ page.heroTitle | default: "" }}</h2>
+            <h5><i>{{ page.heroSubtitle | default: "" }}</i></h5>
         </div>
     </div>
-    <div class="hero-cover-text">
-        <h2>{{ page.heroTitle | default: "" }}</h2>
-        <h5><i>{{ page.heroSubtitle | default: "" }}</i></h5>
-    </div>
-</div>
+</header>
