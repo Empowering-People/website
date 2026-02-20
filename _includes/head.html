@@ -4,18 +4,16 @@
 
     <title>{{ page.title | default: "Empowering People Scotland" }}</title>
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <meta
-        name="description"
-        content="Specialist services designed to empower individuals with extra support needs and hidden disabilities, to gain willful employment and lead fulfilling lives."
-    />
+    <meta name="description" content="{{ page.heroSubtitle }}" />
 
     <meta
         property="og:title"
         content="{{ page.title | default: 'Empowering People Scotland' }}"
     />
+    <meta property="og:description" content="{{ page.heroSubtitle }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:image" content="/assets/images/embedimg.jpg" />
+    <meta property="og:image" content="/assets/images/embedimg.webp" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
 
