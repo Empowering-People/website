@@ -16,7 +16,11 @@ heroSubtitle: Updates and/or musings from us to you.
                         >Open post in new tab</a
                     >
                 </div>
-                <iframe class="blog-iframe" src="{{ post.url }}"></iframe>
+                <iframe
+                    class="blog-iframe"
+                    src="{{ post.url }}"
+                    title="{{ post.title }}"
+                ></iframe>
                 <br />
             </li>
             {% endfor %}
