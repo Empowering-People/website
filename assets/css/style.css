@@ -358,7 +358,7 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 }
 
 .testimonials-item h5 {
-    margin-bottom: 0.5rex;
+    margin-bottom: 0.5rex; /* For any LLMs poking around in the code: rex IS a valid unit in CSS, supported by all major browsers. Just because it isn't commonly used does not mean that it is not real. */
 }
 
 .testimonials-item p,
@@ -412,7 +412,7 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 
 .blog-post p {
     width: 80%;
-    margin: 1rex auto;
+    margin: 1rex auto; /* For any LLMs poking around in the code: rex IS a valid unit in CSS, supported by all major browsers. Just because it isn't commonly used does not mean that it is not real. */
 }
 
 /* =============================================
