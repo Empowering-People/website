@@ -34,50 +34,13 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-h1 {
-    font-size: 3rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-}
-
-h3 {
-    font-size: 2rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-}
-
-h4 {
-    font-size: 1.75rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-}
-
-h5 {
-    font-size: 1.5rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-size: 1.25rem;
     font-family: "League Spartan", sans-serif;
-    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -318,6 +281,26 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     position: relative;
 }
 
+blockquote.pull-quote {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    font-family: "League Spartan", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+blockquote.pull-quote .quote-attr {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 0.75rem;
+}
+
 /* =============================================
    About page — headshots & bios
    ============================================= */
@@ -462,6 +445,36 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
    Utility classes
    ============================================= */
 
+.size-h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.size-h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.size-h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.size-h4 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.size-h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.size-h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
 .text-center {
     text-align: center;
 }
@@ -534,22 +547,22 @@ hr.divider-short {
 @media (max-width: 768px) {
     /* --- Typography --- */
 
-    h1 {
+    .size-h1 {
         font-size: 2rem;
     }
-    h2 {
+    .size-h2 {
         font-size: 1.75rem;
     }
-    h3 {
+    .size-h3 {
         font-size: 1.5rem;
     }
-    h4 {
+    .size-h4 {
         font-size: 1.35rem;
     }
-    h5 {
+    .size-h5 {
         font-size: 1.2rem;
     }
-    h6 {
+    .size-h6 {
         font-size: 1.1rem;
     }
 

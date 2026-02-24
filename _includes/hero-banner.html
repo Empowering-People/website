@@ -58,8 +58,10 @@
             </div>
         </div>
         <div class="hero-cover-text">
-            <h2>{{ page.heroTitle | default: "" }}</h2>
-            <h5><i>{{ page.heroSubtitle | default: "" }}</i></h5>
+            <h1 class="size-h1">{{ page.heroTitle | default: "" }}</h1>
+            <p class="size-h5">
+                <i>{{ page.heroSubtitle | default: "" }}</i>
+            </>
         </div>
     </div>
 </header>
