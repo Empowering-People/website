@@ -74,38 +74,7 @@ a:hover {
     transform: scale(1.15) rotate(-1deg);
 }
 
-/* =============================================
-   OpenDyslexic toggle
-   ============================================= */
-
-.dyslexic-font-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
-    background: var(--ep-navy);
-    color: var(--ep-white);
-    border: transparent;
-    border-radius: 12px;
-    margin: 0;
-    padding: 12px;
-    font-family: "OpenDyslexic", sans-serif;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: 0.25s ease-out;
-}
-
-.dyslexic-font-toggle:hover {
-    background: var(--ep-white);
-    color: var(--ep-ink);
-}
-
-.dyslexic-font-toggle .toggle-text {
-    font-family: "OpenDyslexic", sans-serif;
-}
-
-/* OpenDyslexic mode, toggled by button at top right of every page. */
+/* OpenDyslexic mode, toggled via the accessibility widget. */
 body.dyslexic-font,
 body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     font-family: "OpenDyslexic", sans-serif !important;
@@ -572,18 +541,6 @@ hr.divider-short {
         font-size: 1.1rem;
     }
 
-    /* --- Dyslexic font toggle --- */
-
-    .dyslexic-font-toggle {
-        padding: 8px;
-        top: 10px;
-        right: 10px;
-    }
-
-    .dyslexic-font-toggle .toggle-text {
-        font-size: 0.75rem;
-    }
-
     /* --- Hero banner --- */
 
     .hero-banner {
@@ -680,5 +637,355 @@ hr.divider-short {
     .footer-info-left,
     .footer-info-right {
         text-align: center;
+    }
+}
+
+/* =============================================
+   Accessibility widget — trigger button
+   ============================================= */
+
+.a11y-widget {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.a11y-widget__trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ep-navy);
+    color: var(--ep-white);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.a11y-widget__trigger:hover,
+.a11y-widget__trigger.is-open {
+    background: var(--ep-white);
+    color: var(--ep-ink);
+    border-color: var(--ep-navy);
+}
+
+.a11y-widget__trigger-label {
+    font-family: inherit;
+}
+
+/* -- Panel --------------------------------------------------- */
+
+.a11y-widget__panel {
+    margin-top: 8px;
+    background: var(--ep-white);
+    border: 2px solid var(--ep-navy);
+    border-radius: 12px;
+    padding: 16px;
+    min-width: 260px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.a11y-widget__panel-heading {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ep-ink);
+    margin: 0 0 4px;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: auto; /* override the global 80%-width rule on <p> */
+}
+
+.a11y-widget__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.a11y-widget__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: var(--ep-ink);
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+/* -- Toggle switch ------------------------------------------- */
+
+.a11y-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.a11y-toggle__track {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background: var(--ep-silver);
+    border-radius: 999px;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.a11y-toggle__thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: var(--ep-white);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.a11y-toggle.is-on .a11y-toggle__track {
+    background: var(--ep-navy);
+}
+
+.a11y-toggle.is-on .a11y-toggle__thumb {
+    transform: translateX(20px);
+}
+
+.a11y-toggle__state-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ep-silver);
+    min-width: 20px;
+    text-align: left;
+}
+
+.a11y-toggle.is-on .a11y-toggle__state-label {
+    color: var(--ep-navy);
+}
+
+/* =============================================
+   High contrast mode
+   ============================================= */
+
+/*
+    When body.high-contrast is active every colour token is replaced
+    with a stark black-and-white palette.  Bright yellow is used
+    exclusively for links so they stay distinguishable from body text.
+    Specificity (body.high-contrast …) beats the ordinary cascade
+    without littering the file with !important on every property.
+*/
+
+:root {
+    --hc-bg: #000000;
+    --hc-text: #ffffff;
+    --hc-link: #ffee00;
+    --hc-border: #ffffff;
+    --hc-btn-bg: #ffffff;
+    --hc-btn-txt: #000000;
+}
+
+/* Base */
+body.high-contrast,
+body.high-contrast main,
+body.high-contrast article,
+body.high-contrast section {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+}
+
+/* All content containers */
+body.high-contrast [class^="content-container-"] {
+    background: var(--hc-bg) !important;
+    color: var(--hc-text) !important;
+}
+
+body.high-contrast [class^="content-container-"] hr {
+    background-color: var(--hc-border) !important;
+    color: var(--hc-border) !important;
+}
+
+/* Links */
+body.high-contrast a {
+    color: var(--hc-link);
+    text-decoration: underline;
+}
+
+body.high-contrast a:hover {
+    color: var(--hc-btn-txt);
+    background: var(--hc-link);
+    outline: 2px solid var(--hc-link);
+}
+
+/* Headings */
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6 {
+    color: var(--hc-text);
+}
+
+/* Hero banner — strip the decorative photo, keep text readable */
+body.high-contrast .hero-banner {
+    background: var(--hc-bg) !important;
+    background-image: none !important;
+    border-bottom: 3px solid var(--hc-border);
+}
+
+body.high-contrast .hero-cover-text,
+body.high-contrast .navbar li a {
+    color: var(--hc-text);
+}
+
+body.high-contrast .navbar li a:hover {
+    color: var(--hc-link);
+    transform: none;
+    text-decoration: underline;
+}
+
+body.high-contrast .nav-active {
+    color: var(--hc-link);
+    text-decoration: underline;
+}
+
+/* Footer */
+body.high-contrast .footer {
+    background: var(--hc-bg);
+    border-top: 3px solid var(--hc-border);
+    color: var(--hc-text);
+}
+
+body.high-contrast .footer p {
+    color: var(--hc-text);
+}
+
+body.high-contrast .footer a,
+body.high-contrast .footer-info-center a {
+    color: var(--hc-link);
+}
+
+/* Blog */
+body.high-contrast .blog-post {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+}
+
+/* Employee headshots — visible border + desaturate so they read as content not decoration */
+body.high-contrast .employee-headshot {
+    border-color: var(--hc-border);
+    filter: grayscale(100%) contrast(1.15);
+}
+
+/* Horizontal rules */
+body.high-contrast hr {
+    background-color: var(--hc-border);
+    color: var(--hc-border);
+}
+
+/* Pull-quotes */
+body.high-contrast blockquote.pull-quote {
+    color: var(--hc-text);
+}
+
+/* -- Accessibility widget in HC mode ------------------------- */
+
+body.high-contrast .a11y-widget__trigger {
+    background: var(--hc-btn-bg);
+    color: var(--hc-btn-txt);
+    border-color: var(--hc-border);
+}
+
+body.high-contrast .a11y-widget__trigger:hover,
+body.high-contrast .a11y-widget__trigger.is-open {
+    background: var(--hc-link);
+    color: var(--hc-btn-txt);
+    border-color: var(--hc-btn-txt);
+}
+
+body.high-contrast .a11y-widget__panel {
+    background: var(--hc-bg);
+    border-color: var(--hc-border);
+}
+
+body.high-contrast .a11y-widget__panel-heading,
+body.high-contrast .a11y-widget__label {
+    color: var(--hc-text);
+}
+
+body.high-contrast .a11y-toggle__track {
+    background: #444444;
+    outline: 2px solid var(--hc-border);
+}
+
+body.high-contrast .a11y-toggle.is-on .a11y-toggle__track {
+    background: var(--hc-link);
+    outline-color: var(--hc-link);
+}
+
+body.high-contrast .a11y-toggle__thumb {
+    background: var(--hc-text);
+}
+
+body.high-contrast .a11y-toggle.is-on .a11y-toggle__thumb {
+    background: var(--hc-btn-txt);
+}
+
+body.high-contrast .a11y-toggle__state-label {
+    color: var(--hc-text);
+}
+
+body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
+    color: var(--hc-link);
+}
+
+/* =============================================
+   Responsive — accessibility widget on mobile
+   ============================================= */
+
+@media (max-width: 768px) {
+    .a11y-widget {
+        top: 10px;
+        right: 10px;
+    }
+
+    .a11y-widget__trigger {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .a11y-widget__panel {
+        min-width: 220px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .a11y-widget__label {
+        font-size: 0.82rem;
     }
 }

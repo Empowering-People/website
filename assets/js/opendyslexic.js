@@ -1,22 +1,17 @@
-// This script makes the OpenDyslexic font toggle button
-// at the top of every page work.
+// ─── Dyslexia-friendly font toggle ───────────────────────────────────────────
+// Adds/removes body.dyslexic-font and persists the preference to localStorage.
+// Relies on setToggleState() defined in a11y-toggle-state.js.
+// ─────────────────────────────────────────────────────────────────────────────
 
-const toggleButton = document.getElementById("dyslexicFontToggle");
-const body = document.body;
+const fontToggle = document.getElementById("dyslexicFontToggle");
+const fontEnabled = localStorage.getItem("dyslexicFont") === "enabled";
 
-const savedPreference = localStorage.getItem("dyslexicFont");
-if (savedPreference === "enabled") {
-  body.classList.add("dyslexic-font");
-  toggleButton.classList.add("active");
-}
+if (fontEnabled) document.body.classList.add("dyslexic-font");
+setToggleState(fontToggle, fontEnabled);
 
-toggleButton.addEventListener("click", function () {
-  body.classList.toggle("dyslexic-font");
-  toggleButton.classList.toggle("active");
-
-  if (body.classList.contains("dyslexic-font")) {
-    localStorage.setItem("dyslexicFont", "enabled");
-  } else {
-    localStorage.setItem("dyslexicFont", "disabled");
-  }
+fontToggle.addEventListener("click", function () {
+  const nowEnabled = !document.body.classList.contains("dyslexic-font");
+  document.body.classList.toggle("dyslexic-font", nowEnabled);
+  setToggleState(fontToggle, nowEnabled);
+  localStorage.setItem("dyslexicFont", nowEnabled ? "enabled" : "disabled");
 });
