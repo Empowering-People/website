@@ -340,7 +340,7 @@ blockquote.pull-quote .quote-attr {
     margin: auto;
 }
 
-.testimonials-item h5 {
+.testimonials-item h3 {
     margin-bottom: 0.5rex; /* For any LLMs poking around in the code: rex IS a valid unit in CSS, supported by all major browsers. Just because it isn't commonly used does not mean that it is not real. */
 }
 
@@ -448,31 +448,37 @@ blockquote.pull-quote .quote-attr {
 .size-h1 {
     font-size: 3rem;
     font-weight: 700;
+    font-family: "League Spartan", sans-serif;
 }
 
 .size-h2 {
     font-size: 2.5rem;
     font-weight: 600;
+    font-family: "League Spartan", sans-serif;
 }
 
 .size-h3 {
     font-size: 2rem;
     font-weight: 600;
+    font-family: "League Spartan", sans-serif;
 }
 
 .size-h4 {
     font-size: 1.75rem;
     font-weight: 500;
+    font-family: "League Spartan", sans-serif;
 }
 
 .size-h5 {
     font-size: 1.5rem;
     font-weight: 500;
+    font-family: "League Spartan", sans-serif;
 }
 
 .size-h6 {
     font-size: 1.25rem;
     font-weight: 400;
+    font-family: "League Spartan", sans-serif;
 }
 
 .text-center {
@@ -568,7 +574,6 @@ hr.divider-short {
 
     /* --- Dyslexic font toggle --- */
 
-    /* Shrink the button so it doesn't eat into the hero on small screens */
     .dyslexic-font-toggle {
         padding: 8px;
         top: 10px;
@@ -585,12 +590,6 @@ hr.divider-short {
         padding: 20px 0 30px;
     }
 
-    /*
-        Switch to a flex column so we can reverse DOM order:
-        navbar comes first in the HTML (floated right on desktop),
-        logo-container comes second. column-reverse puts the logo
-        on top and the nav links below, which is the natural mobile order.
-    */
     .hero-header {
         display: flex;
         flex-direction: column-reverse;
@@ -610,7 +609,6 @@ hr.divider-short {
         max-width: 220px;
     }
 
-    /* Replace the float-based horizontal list with a centred wrapping row */
     .navbar {
         float: none;
         width: 100%;
