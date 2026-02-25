@@ -7,8 +7,8 @@ postedOn: "DD/MM/YYYY"   # these.
 ---
 
 <!-- Don't touch these. -->
-# {{ page.title }}
-<p class="size-h2">By {{ page.author }}</p>
-<p class="size-h3">{{ page.postedOn }}</p>
+<h1 class="size-h1 text-center">{{ page.title }}</h1>
+<p class="size-h2 text-center">By {{ page.author }}</p>
+<p class="size-h3 text-center">{{ page.postedOn }}</p>
 
 <!-- Write the text of your post below here. -->

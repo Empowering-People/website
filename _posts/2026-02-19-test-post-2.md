@@ -6,9 +6,9 @@ author: "Gabriel Sykes"
 postedOn: "19/02/2026"
 ---
 
-# {{ page.title }}
-<p class="size-h2">By {{ page.author }}</p>
-<p class="size-h3">{{ page.postedOn }}</p>
+<h1 class="size-h1 text-center">{{ page.title }}</h1>
+<p class="size-h2 text-center">By {{ page.author }}</p>
+<p class="size-h3 text-center">{{ page.postedOn }}</p>
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
