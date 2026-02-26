@@ -55,7 +55,10 @@ body.high-contrast .hero-banner {
     border-bottom: 3px solid var(--hc-border);
 }
 
-body.high-contrast .hero-cover-text,
+body.high-contrast .hero-cover-text {
+    color: var(--hc-text);
+}
+
 body.high-contrast .navbar li a {
     color: var(--hc-text);
 
