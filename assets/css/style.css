@@ -28,7 +28,6 @@
    Reset / Base
    ============================================= */
 
-/* Ensure the HTML [hidden] attribute always wins over display rules set by class. */
 [hidden] {
     display: none !important;
 }
@@ -151,7 +150,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     text-decoration: none;
 }
 
-/* Default pill style */
 .navbar li a.nav-cta {
     background: var(--ep-white);
     color: var(--ep-blue);
@@ -166,7 +164,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
         border-color 0.25s ease;
 }
 
-/* Hover — flip to outlined ghost */
 .navbar li a.nav-cta:hover {
     background: transparent;
     color: var(--ep-white);
@@ -174,7 +171,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     transform: scale(1.1) rotate(-1deg);
 }
 
-/* Active page — stay filled, add underline to match other active links */
 .navbar li a.nav-cta.nav-active {
     background: var(--ep-white);
     color: var(--ep-navy);
@@ -213,10 +209,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
    Content containers
    ============================================= */
 
-/*
-    Base styles shared by every content container.
-    Colour theming is handled by the modifier classes below.
-*/
 [class^="content-container-"] {
     width: 100vw;
     max-width: 100%;
@@ -239,7 +231,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     padding: 0;
 }
 
-/* Light backgrounds — dark text, dark rule */
 .content-container-white,
 .content-container-cream,
 .content-container-silver {
@@ -253,7 +244,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     color: var(--ep-ink);
 }
 
-/* Dark backgrounds — light text, light rule */
 .content-container-slate,
 .content-container-ink,
 .content-container-navy {
@@ -267,7 +257,6 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
     color: var(--ep-white);
 }
 
-/* Background colours */
 .content-container-white {
     background: var(--ep-white);
 }
@@ -495,25 +484,21 @@ blockquote.pull-quote .quote-attr {
     min-height: 50vh;
 }
 
-/* Standard 80%-width, auto-margin block for headings inside content containers */
 .section-title {
     width: 80%;
     margin: auto;
 }
 
-/* Lists inside content containers */
 .content-list {
     width: 80%;
     margin: auto;
 }
 
-/* Unstyled list */
 .list-none {
     list-style-type: none;
     padding: 0;
 }
 
-/* Short horizontal divider used inside cards */
 hr.divider-short {
     width: 25%;
     margin: 0;
@@ -671,7 +656,6 @@ hr.divider-short {
         gap: 20px;
     }
 
-    /* Override the left/right text-align so all three columns centre on mobile */
     .footer-info-left,
     .footer-info-right {
         text-align: center;
@@ -747,7 +731,7 @@ hr.divider-short {
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    width: auto; /* override the global 80%-width rule on <p> */
+    width: auto;
 }
 
 .a11y-widget__option {
@@ -829,14 +813,6 @@ hr.divider-short {
    High contrast mode
    ============================================= */
 
-/*
-    When body.high-contrast is active every colour token is replaced
-    with a stark black-and-white palette.  Bright yellow is used
-    exclusively for links so they stay distinguishable from body text.
-    Specificity (body.high-contrast …) beats the ordinary cascade
-    without littering the file with !important on every property.
-*/
-
 :root {
     --hc-bg: #000000;
     --hc-text: #ffffff;
@@ -846,7 +822,6 @@ hr.divider-short {
     --hc-btn-txt: #000000;
 }
 
-/* Base */
 body.high-contrast,
 body.high-contrast main,
 body.high-contrast article,
@@ -855,7 +830,6 @@ body.high-contrast section {
     color: var(--hc-text);
 }
 
-/* All content containers */
 body.high-contrast [class^="content-container-"] {
     background: var(--hc-bg) !important;
     color: var(--hc-text) !important;
@@ -866,7 +840,6 @@ body.high-contrast [class^="content-container-"] hr {
     color: var(--hc-border) !important;
 }
 
-/* Links */
 body.high-contrast a {
     color: var(--hc-link);
     text-decoration: underline;
@@ -879,7 +852,6 @@ body.high-contrast a:hover {
     transform: none;
 }
 
-/* Headings */
 body.high-contrast h1,
 body.high-contrast h2,
 body.high-contrast h3,
@@ -889,7 +861,6 @@ body.high-contrast h6 {
     color: var(--hc-text);
 }
 
-/* Hero banner — strip the decorative photo, keep text readable */
 body.high-contrast .hero-banner {
     background: var(--hc-bg) !important;
     background-image: none !important;
@@ -912,7 +883,6 @@ body.high-contrast .nav-active {
     text-decoration: underline;
 }
 
-/* Footer */
 body.high-contrast .footer {
     background: var(--hc-bg);
     border-top: 3px solid var(--hc-border);
@@ -928,25 +898,21 @@ body.high-contrast .footer-info-center a {
     color: var(--hc-link);
 }
 
-/* Blog */
 body.high-contrast .blog-post {
     background: var(--hc-bg);
     color: var(--hc-text);
 }
 
-/* Employee headshots — visible border + desaturate so they read as content not decoration */
 body.high-contrast .employee-headshot {
     border-color: var(--hc-border);
     filter: grayscale(100%) contrast(1.15);
 }
 
-/* Horizontal rules */
 body.high-contrast hr {
     background-color: var(--hc-border);
     color: var(--hc-border);
 }
 
-/* Pull-quotes */
 body.high-contrast blockquote.pull-quote {
     color: var(--hc-text);
 }
@@ -1075,9 +1041,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
     background: var(--ep-ink);
 }
 
-/* Each slide is stacked on top of the others via absolute positioning.
-   Crossfade is achieved by transitioning opacity, not by display switching,
-   so there is no white flash between slides. */
 .carousel-slide {
     position: absolute;
     inset: 0;
@@ -1096,7 +1059,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
     display: block;
 }
 
-/* Caption bar at the bottom of each slide */
 .carousel-caption {
     position: absolute;
     bottom: 0;
@@ -1111,7 +1073,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
     text-align: center;
 }
 
-/* Slide counter (top-left, e.g. "1 / 3") */
 .carousel-numbertext {
     position: absolute;
     top: 10px;
@@ -1124,7 +1085,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
     border-radius: 4px;
 }
 
-/* Prev / Next arrow buttons */
 .carousel-prev,
 .carousel-next {
     position: absolute;
@@ -1158,7 +1118,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
     background: rgba(0, 0, 0, 0.85);
 }
 
-/* Dot indicators */
 .carousel-dots {
     text-align: center;
     margin-top: 14px;
@@ -1186,9 +1145,6 @@ body.high-contrast .a11y-toggle.is-on .a11y-toggle__state-label {
    High contrast — carousel overrides
    ============================================= */
 
-/* Disable the crossfade transition so slides snap instantly,
-   preventing the brief invisible-slide moment that can be
-   disorienting for users who need high contrast. */
 body.high-contrast .carousel-slide {
     transition: none;
 }
