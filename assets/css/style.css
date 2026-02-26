@@ -9,35 +9,6 @@
     --ep-ink: #1e1f2a;
     --ep-silver: #9ca0b0;
     --ep-white: #eff1f5;
-
-    /* Catppuccin Latte, this is here because I plan to move the site over to this palette eventually. */
-
-    --ctp-latte-rosewater: #dc8a78;
-    --ctp-latte-flamingo: #dd7878;
-    --ctp-latte-pink: #ea76cb;
-    --ctp-latte-mauve: #8839ef;
-    --ctp-latte-red: #d20f39;
-    --ctp-latte-maroon: #e64553;
-    --ctp-latte-peach: #fe640b;
-    --ctp-latte-yellow: #df8e1d;
-    --ctp-latte-green: #40a02b;
-    --ctp-latte-teal: #179299;
-    --ctp-latte-sky: #04a5e5;
-    --ctp-latte-sapphire: #209fb5;
-    --ctp-latte-blue: #1e66f5;
-    --ctp-latte-lavender: #7287fd;
-    --ctp-latte-text: #4c4f69;
-    --ctp-latte-subtext-1: #5c5f77;
-    --ctp-latte-subtext-0: #6c6f85;
-    --ctp-latte-overlay-2: #7c7f93;
-    --ctp-latte-overlay-1: #8c8fa1;
-    --ctp-latte-overlay-0: #9ca0b0;
-    --ctp-latte-surface-2: #acb0be;
-    --ctp-latte-surface-1: #bcc0cc;
-    --ctp-latte-surface-0: #ccd0da;
-    --ctp-latte-base: #eff1f5;
-    --ctp-latte-mantle: #e6e9ef;
-    --ctp-latte-crust: #dce0e8;
 }
 
 /*
@@ -178,6 +149,37 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 .nav-inactive {
     font-weight: 400;
     text-decoration: none;
+}
+
+/* Default pill style */
+.navbar li a.nav-cta {
+    background: var(--ep-white);
+    color: var(--ep-navy);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Hover — flip to outlined ghost */
+.navbar li a.nav-cta:hover {
+    background: transparent;
+    color: var(--ep-white);
+    border-color: var(--ep-white);
+    transform: scale(1.1) rotate(-1deg);
+}
+
+/* Active page — stay filled, add underline to match other active links */
+.navbar li a.nav-cta.nav-active {
+    background: var(--ep-white);
+    color: var(--ep-navy);
+    border-color: var(--ep-white);
+    text-decoration: underline;
 }
 
 .logo-container {
@@ -956,6 +958,25 @@ body.high-contrast .footer-info-center a:hover {
     background: var(--hc-link);
     outline: 2px solid var(--hc-link);
     transform: none;
+    text-decoration: underline;
+}
+
+body.high-contrast .navbar li a.nav-cta {
+    background: var(--hc-link);
+    color: var(--hc-btn-txt);
+    border-color: var(--hc-link);
+}
+
+body.high-contrast .navbar li a.nav-cta:hover {
+    background: var(--hc-btn-bg);
+    color: var(--hc-btn-txt);
+    border-color: var(--hc-btn-bg);
+    transform: none;
+}
+
+body.high-contrast .navbar li a.nav-cta.nav-active {
+    background: var(--hc-link);
+    color: var(--hc-btn-txt);
     text-decoration: underline;
 }
 
