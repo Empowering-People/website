@@ -154,7 +154,7 @@ body.dyslexic-font *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
 /* Default pill style */
 .navbar li a.nav-cta {
     background: var(--ep-white);
-    color: var(--ep-navy);
+    color: var(--ep-blue);
     border-radius: 999px;
     padding: 8px 16px;
     font-weight: 700;
