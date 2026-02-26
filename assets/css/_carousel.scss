@@ -1,0 +1,131 @@
+/* Testimonials image carousel */
+
+.carousel-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    background: var(--ep-ink);
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--ep-white);
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.carousel-numbertext {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    color: var(--ep-white);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    color: var(--ep-white);
+    border: none;
+    padding: 14px 18px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.25s ease;
+    z-index: 10;
+    line-height: 1;
+    user-select: none;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.85);
+    }
+}
+
+.carousel-prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+.carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    background: var(--ep-silver);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: background-color 0.4s ease;
+
+    &.is-active,
+    &:hover {
+        background: var(--ep-navy);
+    }
+}
+
+/* Responsive layout for mobile and smaller screens */
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        width: 95%;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        padding: 10px 13px;
+        font-size: 1rem;
+    }
+}
