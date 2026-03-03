@@ -13,6 +13,18 @@
     margin: auto;
 }
 
+.back-to-blog-container {
+    width: 80%;
+    margin: 0 auto 1rem;
+
+    a {
+        font-family: "League Spartan", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--ep-blue);
+    }
+}
+
 .blog-post {
     background: var(--ep-cream);
     min-height: 100vh;
@@ -43,6 +55,9 @@
         width: 95%;
     }
     .blog-post p {
+        width: 90%;
+    }
+    .back-to-blog-container {
         width: 90%;
     }
 }
